@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <h1 style="margin-left: 300px;">
+    1. What is your client credential?
+  </h1>
+  <br></br>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary" style="border-color: #af0011">
+      <div class="panel-heading" style="background-color: #af0011"> Shipper </div>
+        <div class="panel-body">
+          <%= simple_form_for @shipper do |f| %>
+            <%= f.input :client_id, label: 'client_id' %>
+            <%= f.input :client_secret, label: 'client_secret' %>
+            <%= f.submit 'Submit', class: "btn btn-primary", style: "background-color: #af0011" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <div class="col-md-6">
+    <div class="panel panel-primary" style="border-color: #af0011";>
+      <div class="panel-heading" style="background-color: #af0011";> Ninjavan </div>
+        <div class="panel-body">
+          <%= simple_form_for @shipper do |f| %>
+            <%= f.input :response, placeholder: 'We audit your input and show resuts here...', as: :text, label: 'Response', input_html: { readonly: true, disabled: true  } %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <br></br>
+  <%=image_tag("ninja_lost.png", size: "200x200", class: "img-responsive center-block")%>
+</div>

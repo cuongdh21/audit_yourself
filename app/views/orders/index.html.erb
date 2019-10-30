@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <h1 style="margin-left: 280px;">
+    2. What are your three tracking numbers?
+  </h1>
+  <br></br>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary" style="border-color: #af0011">
+      <div class="panel-heading" style="background-color: #af0011"> Shipper </div>
+        <div class="panel-body">
+          <%= simple_form_for @order do |f| %>
+            <%= f.input :tracking_id1, label: 'Tracking Number 1' %>
+            <%= f.input :tracking_id2, label: 'Tracking Number 2' %>
+            <%= f.input :tracking_id3, label: 'Tracking Number 3' %>
+            <%= f.submit 'Submit', class: "btn btn-primary", style: "background-color: #af0011" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <div class="col-md-6">
+    <div class="panel panel-primary" style="border-color: #af0011";>
+      <div class="panel-heading" style="background-color: #af0011";> Ninjavan </div>
+        <div class="panel-body">
+          <%= simple_form_for @order do |f| %>
+            <%= f.input :response, placeholder: 'We audit your input and show resuts here...', as: :text, label: 'Response', input_html: { readonly: true, disabled: true  } %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <br></br>
+  <%=image_tag("ninja_lost.png", size: "200x200", class: "img-responsive center-block")%>
+</div>

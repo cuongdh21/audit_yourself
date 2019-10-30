@@ -1,0 +1,10 @@
+local: &local
+  adapter: mysql2
+  encoding: utf8
+  host: 127.0.0.1
+  username: root
+  password: password
+
+development:
+  <<: *local
+  database: audit_yourself_local_gl
